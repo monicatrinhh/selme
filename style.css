@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap');
+
+*
+{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body
+{
+    background: #fff;
+    min-height: 200vh;
+
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+
+header.sticky
+{
+   padding: 5px 100px;
+   background: linear-gradient(#3c096c, #8c52ff 0%, #f2b8a3 100%);
+
+}
+
+header .logo
+{
+    position: relative;
+    max-width: 200px;
+    transition: 0.6s;
+
+}
+header ul.nav-ul
+{
+    position: relative;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+header ul.nav-ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul.nav-ul li a
+{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+
+header ul.nav-ul li :hover
+{
+    color: #8c52ff;
+    transition: 0.5s;
+}
+
+.banner
+{
+    position: relative
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    
+}
+header.sticky ul.nav-ul li a
+{
+    color: #fff; 
+}
+
+header.sticky ul.nav-ul li :hover
+{
+    opacity: 50%;
+    transition: 0.5s;
+}
+
+header #logo_scroll
+{
+    display: none;
+}
+
+header.sticky #logo_scroll
+{
+    display: block;
+}
+header.sticky .logo
+{
+    display: none; 
+}
+
+
+.content
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .textbox
+{
+    position: relative;
+    max-width: 600px;
+}
+.content .textbox h2
+{
+    color: #333;
+    font-size: 3.5em;
+    line-height: 1.2em;
+    font-weight: 500;
+}
+.content .textbox h2 span
+{
+    background: linear-gradient(#3c096c, #8c52ff 0%, #f2b8a3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content .textbox p
+{
+    color: #3c096c;
+}
+
+.content .textbox a
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #8c52ff;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+}
+
+.content .imgbox
+{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.content .imgbox img
+{
+    max-width: 450px;
+}
+
+.thumb
+{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.thumb li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.thumb li:hover
+{
+    transform: translateY(-15px);
+}
+.thumb li img
+{
+    max-width: 60px;
+}
+.social
+{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.social li
+{
+    list-style: none;
+}
+.social li a
+{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+}
+.social li a img
+{
+    max-width: 50px;
+}
+.circle
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #8c52ff;
+    clip-path: circle(600px at right 800px);
+}
+
+.animateText
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f2b8a3;
+}
+
+#entertained h2
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    font-size: 8em;
+    
+}
+.introText
+{
+    position: absolute;
+}
+
+
+.introText h2
+{
+    position: absolute;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    font-size: 8em;
+}
+.introText h2:nth-child(1)
+{
+    color: transparent;
+    -webkit-text-stroke: 2px #8c52ff;
+}
+.introText h2:nth-child(2)
+{
+    color: #8c52ff;
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate
+{
+    0% , 100%
+    {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50%
+    {
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 63%, 70% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
